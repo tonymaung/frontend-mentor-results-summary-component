@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  position: relative;
+  background: hsl(221, 100%, 96%);
+  min-height: 100vh;
+  font-size: 18px;
+}
+.container {
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper {
+  max-width: 600px;
+  overflow: hidden;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 600px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+}
+.col {
+  width: 50%;
+  overflow: hidden;
+  height: 425px;
+}
+.top-col {
+  background: rgb(120, 87, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+  padding: 40px 50px;
+  border-radius: 15px;
+  overflow-y: hidden;
+  max-height: 550px;
+}
+.result {
+  color: hsl(241, 100%, 89%);
+}
+.circle {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: hsla(256, 72%, 46%);
+  background: linear-gradient(
+    360deg,
+    hsla(241, 72%, 46%, 0) 0%,
+    hsla(256, 72%, 46%, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.score {
+  font-size: 50px;
+  color: hsl(221, 100%, 96%);
+}
+p.p-score {
+  color: hsl(241, 100%, 89%);
+  font-size: 14px;
+}
+.top-col .comment-heading {
+  font-size: 24px;
+  color: hsl(221, 100%, 96%);
+  margin-bottom: 20px;
+}
+.top-col .sub-heading {
+  font-size: 14px;
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+}
+.bot-col {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: 0 auto;
+  padding: 0px 30px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  max-height: 550px;
+}
+.inner-col {
+  width: 100%;
+  height: 100%;
+}
+.heading {
+  font-size: 18px;
+  color: hsl(224, 30%, 27%);
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+.mini-row {
+  border-radius: 7px;
+  font-size: 16px;
+  min-height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.row-1 {
+  background: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%);
+}
+
+.row-2 {
+  color: hsl(39, 100%, 56%);
+  background: hsla(39, 100%, 56%, 0.1);
+}
+.row-3 {
+  color: hsl(166, 100%, 37%);
+  background: hsla(166, 100%, 37%, 0.1);
+}
+.row-4 {
+  color: hsl(234, 85%, 45%);
+  background: hsla(234, 85%, 45%, 0.1);
+}
+.mini-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mini-col img {
+  margin-right: 10px;
+  width: 18px;
+  height: auto;
+}
+.marks {
+  color: hsla(224, 30%, 27%, 0.5);
+}
+.sub-score {
+  color: hsl(224, 30%, 27%);
+}
+button {
+  width: 100%;
+  padding: 15px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  border-radius: 25px;
+  margin-top: 15px;
+}
+button:hover {
+  cursor: pointer;
+  background: hsla(256, 72%, 46%);
+  background: linear-gradient(
+    360deg,
+    hsl(241, 72%, 46%, 1) 0%,
+    hsl(256, 72%, 46%, 1) 100%
+  );
+}
+.mobile {
+  display: none;
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
+  .container {
+    display: none;
+  }
+  .top-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 48vh;
+    background: rgb(120, 87, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(120, 87, 255, 1) 0%,
+      rgba(46, 43, 233, 1) 100%
+    );
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .result {
+    margin-top: 1.5rem;
+  }
+  .circle {
+    width: 7rem;
+    height: 7rem;
+  }
+  .score {
+    font-size: 40px;
+    color: hsl(221, 100%, 96%);
+  }
+  p.p-score {
+    color: hsl(241, 100%, 89%);
+    font-size: 14px;
+  }
+  .comment-heading {
+    font-size: 1.6rem;
+    color: hsl(221, 100%, 96%);
+  }
+  .sub-heading {
+    margin: 0 auto;
+    text-align: center;
+    padding: 3% 12%;
+    font-size: 16px;
+    margin-bottom: 9%;
+    color: hsl(241, 100%, 89%);
+  }
+  .inner-col {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
